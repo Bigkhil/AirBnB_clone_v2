@@ -21,7 +21,8 @@ def ctext(text):
     '''this function handles the ctect route'''
     return f"C {text.replace('_', ' ')}"
 
-@app.route('/python', strict_slashes=False, defaults={'text':'is cool'})
+
+@app.route('/python', strict_slashes=False, defaults={'text': 'is cool'})
 @app.route('/python/<text>', strict_slashes=False)
 def pthon_text(text):
     return f"Python {text.replace('_', ' ')}"
