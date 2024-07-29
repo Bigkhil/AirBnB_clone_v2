@@ -16,5 +16,11 @@ def hbnb():
     return 'HBNB'
 
 
+@app.route('/c/<string:text>', strict_slashes=False)
+def ctext(text):
+    '''this function handles the ctect route'''
+    return f"C {text.replace('_', ' ')}"
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
